@@ -44,3 +44,6 @@ java Main extract test.idx output.csv
 - Efficient memory usage
 - Command-line driven
 - CSV-based bulk loading and export
+
+# Troubles
+- Implementing node splitting without accidentally corrupting parent-child relationships was especially tricky, particularly when updating block IDs and ensuring that header metadata remained consistent. Debugging errors in tree traversal was also difficult due to the binary nature of the file — mistakes often only surfaced when search or extract produced missing or misordered data.
